@@ -1,0 +1,18 @@
+USE LF_MANUTENCAODB
+
+CREATE PROCEDURE dbo.SPR_ORDER_SERVICE
+	@P_ID_RESERVA INT 
+
+-- Proecedure criada para inserir de forma dinâmica valores na tabela 
+-- ///
+-- ///
+-- EXEC SPR_ORDER_SERVICE
+	-- @P_ID_RESERVA
+	AS
+
+	SELECT * INTO ORDER_SERVICE
+		FROM VW_ORDER_SERVICE
+		WHERE ID_RESERVA = @P_ID_RESERVA
+
+	
+		
